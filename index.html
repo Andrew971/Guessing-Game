@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+        var name = prompt('What is your name?');
+        console.log(name); // If user input "John", the output will be "John"
+        // var Inumber = prompt('Choose a number');
+        function MAX() {
+
+            return parseInt(prompt('Choose a number'));
+
+        }
+        const max = MAX();
+
+        function secretNumber() {
+            return Math.floor(Math.random() * (max - 1 + 1)) + 1;
+        }
+
+        const goal = secretNumber()
+        if (max !== 0) {
+            secretNumber();
+            alert('Hi' + ' ' + name + ' ' + 'you have chosen the number' + ' ' + max);
+            check();
+        } else {
+            alert("Hooo Why don't you wanna play with me")
+        }
+
+        function input() {
+            return parseInt(prompt('Please enter a number between' + ' ' + 1 + ' ' + 'and' + ' ' + max));
+        }
+
+        function check() {
+            // check if a guess is correct and return a boolean
+            do {
+                var guess = input()
+
+                if (guess < goal) {
+                    alert("too low !");
+
+                }
+                else if (guess > goal) {
+                    alert("too high");
+                }
+                else if (guess === goal) {
+                    alert("Congratulation");
+                }
+
+            } while(guess !== goal);}
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Don't need anything here for now -->
+</body>
+
+</html>
